@@ -34,12 +34,13 @@ public class CommandManager implements CommandExecutor {
             if (player != null) {
                 player.teleport(plugin.getSchedule().getLocation());
                 plugin.getTeleportedMsg().forEach(player::sendMessage);
+                sender.sendMessage(ChatColor.GREEN + playerName + ChatColor.GRAY + " has been " + ChatColor.DARK_GREEN + "teleported" + ChatColor.GRAY + "!");
                 return true;
             }
             // Add name to scheduled players.
             plugin.getSchedule().getScheduledPlayers().add(playerName.toLowerCase());
             plugin.getSchedule().writeToDisk();
-            sender.sendMessage(ChatColor.GREEN + playerName + ChatColor.GRAY + " has been scheduled for a teleport once they log in!");
+            sender.sendMessage(ChatColor.GREEN + playerName + ChatColor.GRAY + " has been " + ChatColor.DARK_GREEN + "scheduled" + ChatColor.GRAY + " for a teleport once they log in!");
             return true;
         } else {
             sender.sendMessage(ChatColor.RED + "Invalid usage! Try '/unglitchme {playerName}' to schedule a teleport to spawn once they log in!");
