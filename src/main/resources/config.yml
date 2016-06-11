@@ -1,0 +1,20 @@
+# UnglitchMe by Terrobility
+# Skype: huntergplays and Spigot: Terrobility <3
+#
+# x=x=x=x=x=x=x=x=x
+# | CONFIGURATION |
+# x=x=x=x=x=x=x=x=x
+# Please don't change the config version.
+config-version: 1
+
+teleport-to:
+    world: "world"
+    use-spawn-point: true
+    if-not-use-this-instead:
+        x: 0.0
+        y: 64.0
+        z: 0.0
+
+plugin-messages:
+    teleported-player:
+    - "&2You have been teleported to &aspawn&2 by an admin as you were glitching!"

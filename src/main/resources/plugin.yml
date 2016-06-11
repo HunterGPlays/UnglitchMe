@@ -1,0 +1,14 @@
+name: ${project.artifactId}
+main: net.terrocidepvp.unglitchme.UnglitchMe
+version: ${project.version}
+author: Terrobility
+description: ${project.description}
+website: https://terrocidepvp.net/
+commands:
+    unglitchme:
+        aliases: [unglitch]
+        description: "Schedule a player to be teleported to spawn when they next log in!"
+permissions:
+    unglitch.use:
+        description: "Allows you to use '/unglitch' to schedule players for teleportation."
+        default: op
