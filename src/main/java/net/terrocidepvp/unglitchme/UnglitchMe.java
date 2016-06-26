@@ -49,7 +49,6 @@ public class UnglitchMe extends JavaPlugin {
         getLogger().info("Loading values from config...");
         teleportedMsg = ColorCodeUtil.translate(getConfig().getStringList("plugin-messages.teleported-player"));
         schedule = Schedule.createSchedule(this);
-        getServer().getScheduler().runTaskTimer(this, () -> schedule.writeToDisk(), 20L, 1200L);
 
         getLogger().info("Loading listeners...");
         CommandManager commandManager = new CommandManager(this);
